@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id" lang="id">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Informasi Mahasiswa</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+type="text/javascript"></script>
+<style type="text/css">
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+.card {
+  width: 250px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  background-color: #fff;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+#kartu {
+  margin: 0;
+  font-weight: bold;
+  color: #333;
+}
+</style>
+<script type="text/javascript">
+$(document).ready(function() {
+  // 1. Pilih elemen dengan id="kartu"
+  // 2. Buat fungsi ketika mouse diarahkan ke kartu
+  $("#kartu").hover(function() {
+    // 3. Ganti background kartu menjadi putih
+    $(this).css("background-color", "#fff");
+    // 4. Warna border menjadi hijau
+    $(this).css("border", "2px solid #4CAF50");
+    // 5. Ukuran kartu diperbesar
+    $(this).css("transform", "scale(1.05)");
+    // 6. Ganti warna teks menjadi lebih gelap
+    $(this).css("color", "#333");
+    // 7. Gunakan $("#status").text() untuk mengubah
+    // teks menjadi "Arahkan mouse ke kartu"
+    $("#status").text("Mouse berada di atas kartu");
+  }, function() {
+    // 6. Gunakan $(this).css() untuk mengembalikan:
+    // - warna background menjadi putih
+    // - warna border menjadi #cccccc
+    // - Ukuran kartu menjadi sedikit lebih besar (scale 1.05)
+    $(this).css("background-color", "#fff");
+    $(this).css("border", "2px solid #cccccc");
+    $(this).css("transform", "scale(1)");
+    // 7. Gunakan $("#status").text() untuk mengubah
+    // teks menjadi "Arahkan mouse ke kartu"
+    $("#status").text("Arahkan mouse ke kartu");
+  });
+});
+</script>
+</head>
+<body>
+<h1>Informasi Mahasiswa</h1>
+<p id="status">Arahkan mouse ke kartu!</p>
+<div id="kartu" class="card">
+<h2>Informasi Data Mahasiswa</h2>
+<p>Nama: Tomingse</p>
+<p>Program Studi: Informatika</p>
+<p>Universitas Atma Jaya Yogyakarta</p>
+</div>
+</body>
+</html>
